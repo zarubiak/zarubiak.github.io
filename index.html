@@ -1,482 +1,859 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<title>Cameron Zarubiak</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Designer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-	<script type="application/x-javascript">
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- Custom Theme files -->
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-	<!--gallery -->
-	<link type="text/css" rel="stylesheet" href="css/cm-overlay.css" />
-	<!-- //gallery -->
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<!-- font-awesome icons -->
-	<!--//Custom Theme files-->
-	<!-- js -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- //js -->
-	<!-- web-fonts -->
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i" rel="stylesheet">
-	<!-- //web-fonts -->
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Kards</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="images/portfolio/zashaicon.png">
+
 </head>
 
-<body>
-	<!-- banner -->
-	<div id="home" class="banner">
-		<div class="banner-agileinfo">
-			<!-- header -->
-			<div class="header">
-				<div class="container">
-					<div class="menu">
-						<a href="" id="menuToggle"> <span class="navClosed"></span> </a>
-						<nav>
-							<a href="#home" class="active scroll">Home</a>
-							<a href="#about" class="scroll">About Me</a>
-							<a href="#skills" class="scroll">Skills</a>
-							<a href="#gallery" class="scroll">My Work</a>
-							<a href="#services" class="scroll">Services</a>
-							<a href="#contact" class="scroll">Contact</a>
-						</nav>
-						<script>
-							(function ($) {
-								// Menu Functions
-								$(document).ready(function () {
-									$('#menuToggle').click(function (e) {
-										var $parent = $(this).parent('.menu');
-										$parent.toggleClass("open");
-										var navState = $parent.hasClass('open') ? "hide" : "show";
-										$(this).attr("title", navState + " navigation");
-										// Set the timeout to the animation length in the CSS.
-										setTimeout(function () {
-											console.log("timeout set");
-											$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
-										}, 200);
-										e.preventDefault();
-									});
-								});
-							})(jQuery);
-						</script>
+<body id="top">
 
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			<!-- //header -->
-			<div class="banner-text">
-				<div class="container">
-					<h1><a href="index.html">Cameron Zarubiak</a></h1>
-					<p class="w3ls-p">4th year Computer Science student // University of Victoria</p>
-					<a href="#about" class="buy btn-wayra scroll">Explore my work</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //banner -->
-	<!-- about -->
-	<div class="agile-about w3ls-section text-center" id="about">
-		<div class="container">
-			<h3 class="agileits-title">about me</h3>
-			<div class="agileits-about-grid">
-				<p>I am a fourth year Computer Science student studying at the University of Victoria.
-				Machine Learning, Networking and Security are the three subjects which interest me the most.
-				I enjoy playing many different sports, being outdoors, and hanging with friends/family. </p>
-			</div>
-			<a href="#contact" class="wthree- about-link scroll">Contact Me</a>
-		</div>
-	</div>
-	<!-- //about -->
-	<!-- about-bottom -->
-	<div class="agileits-about-btm">
-		<div class="container">
-			<div class="w3-flex">
-			<div class="col-md-4 col-sm-4 col-xs-12 ab1 agileits-about-grid1">
-				<span class="fa fa-trophy" aria-hidden="true"></span>
-				<h4 class="agileinfo-head">Completed Projects</h4>
-				<h5>Battlesnake 2018</h5>
-				<p>Developed a snake to compete in the annual Battlesnake competition hosted at the Victoria Conference Centre.</p>
-				<h5>Hack UVIC 2018</h5>
-				<p>Used linear regression in an attempt to predict how many points NHL rookies would expect in their first season.</p>
-				<h5>Zasha Apparel Financial Analysis</h5>
-				<p>Built a spreadsheet to track sales, break-even points, profits and more based off of investments and cost of materials.</p>
-			</div>
-			<div class="col-md-4 col-sm-4 ab1 agileits-about-grid2">
-				<span class="fa fa-graduation-cap  wthree-title-list" aria-hidden="true"></span>
-				<h4 class="agileinfo-head">Education</h4>
-				<h5>University of Victoria</h5>
-				<p>4th year Computer Science student</p>
-				<h5>Lord Tweedsmuir Secondary School</h5>
-				<p>Honour Roll graduate</p>
-			</div>
-			<!--<div class="col-md-4 col-sm-4 ab1 agileits-about-grid3">
-				<span class="fa fa-shield  wthree-title-list" aria-hidden="true"></span>
-				<h4 class="agileinfo-head">expertise</h4>
-				<h5>Senior Interface Designer</h5>
-				<p>20XX-20XX</p>
-				<h5>Graphic Designer</h5>
-				<p>20XX-20XX</p>
-				<h5>Web Designer</h5>
-				<p>20XX-20XX</p>
-			</div>-->
-			<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!-- //about-bottom -->
-	<!-- skills -->
-	<div class="agile-service w3ls-section" id="skills">
-		<div class="container">
-			<div class="col-md-5 w3_agileits-service-left">
-				<h3 class="agileits-title">Technical Skills</h3>
-				<p>Here are some of my technical skills and how proficient (in percentage) I feel I am with them.</p>
-			</div>
-			<div class="col-md-7 skills-right">
-				<div class="vertical-skills  pull-right xs-center">
-					<ul class="list-inline">
-						<li>
-							<div class="skill" style="height:100%; background:#ff9d0d;"><span class="value">100%</span></div><span class="title">OSes</span></li>
-						<li>
-							<div class="skill" style="height:90%; background:#73a9f4;"><span class="value">90%</span></div><span class="title">Microsoft Office</span></li>
-						<li>
-							<div class="skill" style="height:85%; background:#6361f0;"><span class="value">85%</span></div><span class="title">Network Protocols</span></li>
-						<li>	
-							<div class="skill" style="height:85%; background:#449688;"><span class="value">85%</span></div><span class="title">Python</span></li>
-						<li>
-							<div class="skill" style="height:80%; background:#6361f0;"><span class="value">80%</span></div><span class="title">Java</span></li>
-						<li>
-							<div class="skill" style="height:80%; background:#b32eca;"><span class="value">80%</span></div><span class="title">Info Security</span></li>
-						<li>
-							<div class="skill" style="height:75%; background:#009688;"><span class="value">75%</span></div><span class="title">Machine Learning</span></li>
+	<!-- header
+   ================================================== -->
+  <header></header>
 
-					</ul>
-				</div>
-				
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<div class="w3ls-section agileits-gallery" id="gallery">
-		<div class="container">
-			<h3 class="agileits-title">MY work</h3>
-			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-				<ul id="myTab" class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#home-main" id="home-tab" role="tab" data-toggle="tab" aria-controls="home-main" aria-expanded="true">Show all</a></li>
-					<li role="presentation"><a href="#learning" role="tab" id="learning-tab" data-toggle="tab" aria-controls="learning">Coding Competitions</a></li>
-					<li role="presentation"><a href="#playing" role="tab" id="playing-tab" data-toggle="tab" aria-controls="playing">School Projects</a></li>
-					<li role="presentation"><a href="#painting" role="tab" id="painting-tab" data-toggle="tab" aria-controls="painting">Personal Projects</a></li>
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+   	<div class="intro-overlay"></div>
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>Hello, World.</h5>
+	   			<h1>I'm Cam Zarubiak</h1>
+
+	   			<p class="intro-position">
+	   				<span>Software Developer</span>
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+	   		</div>
+
+   		</div>
+   	</div> <!-- /intro-content -->
+
+   	<ul class="intro-social">
+         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      </ul> <!-- /intro-social -->
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About</h5>
+   			<h1>Let me introduce myself.</h1>
+
+   			<div class="intro-info">
+
+   				<img src="images/profile-pic.jpg" alt="Profile Picture">
+
+   				<p class="lead">I am a soon to be graduate from the University of Victoria with a major in Computer Science, Software Engineering option. I'm currently very
+            interested in learning how to design and develop React based websites. Some of my side projects include design of personal websites, using machine learning
+            in an attempt to predict NHL statistics, and competing in the last two Battlesnake events (using Python last year and Javascript this year).</p>
+   			</div>
+
+   		</div>
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<h3>Profile</h3>
+   			<p>I am a 22 year old Software Developer based out of Victoria, BC. I was born in Saskatoon, Saskatchewan and move to British Columbia when I was 9.
+        I'm extermely passionate about being creative and designing.  </p>
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Cameron Zarubiak</span>
+   				</li>
+   				<li>
+   					<strong>Website:</strong>
+   					<span>www.zarubiak.github.io</span>
+            <span>www.zashaapparel.com</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>camzarubiak@gmail.com</span>
+            <span>zashaapparel@gmail.com</span>
+   				</li>
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+
+				<ul>
+				   <li>
+				   	Proficient knowledge of HTML/CSS/JavaScript
+				   </li>
+				   <li>
+				   	Thorough understanding of Python and similar Object Oriented Languages
+				   </li>
+				   <li>
+				   	Passionate about UI/UX Design
+				   </li>
+				   <li>
+				   	Currently improving my ReactJS/AngularJS skills by taking online courses to reinforce my knowledge of the subject
+				   </li>
+				   <li>
+            Experience using version control with Git/GitHub
+				   </li>
+           <li>
+				   	Knowledge of database systems (Oracle and PostgreSQL)
+				   </li>
+				   <li>
+				   	Proficient in Windows/Mac/Linux
+				   </li>
+				   <li>
+				   	Extensive Microsoft Office experience
+				   </li>
+				   <li>
+            Designing images using Adobe Photoshop/Inkscape
+				   </li>
+
 				</ul>
-				<div id="myTabContent" class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
-						<div class="w3_tab_img">
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g1.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g1.jpg" alt=" " class="img-responsive" />
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Zasha Apparel Financial Analysis</h5>
-									<p>May 2018</p>
-									<p>Built a spreadsheet to track sales, break-even points, profits and more based off of investments and cost of materials.</p>
-								</div>
-							</div>
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g2.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g2.jpg" alt=" " class="img-responsive" />
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Google QUIC FTP Project</h5>
-									<p>April 2018</p>
-									<p>I analyzed different file transfer protocols and tried to determine how QUIC uses different aspects from TCP and UDP coherently.</p>
-								</div>
-							</div>
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g3.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g3.jpg" alt=" " class="img-responsive" />
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Battlesnake 2018</h5>
-									<p>March 2018</p>
-									<p>I developed a snake to compete in the annual Battlesnake competition hosted at the Victoria Conference Centre.</p>
-								</div>
-							</div>
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g4.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g4.jpg" alt=" " class="img-responsive" />
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Hack UVIC 2018</h5>
-									<p>March 2018</p>
-									<p>Used linear regression in an attempt to predict how many points NHL rookies would expect in their first season.</p>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="learning" aria-labelledby="learning-tab">
-						<div class="w3_tab_img">
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/download.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/download.jpg" alt=" " class="img-responsive">
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Battlesnake 2018</h5>
-									<p>March 2018</p>
-									<p>I developed a snake to compete in the annual Battlesnake competition hosted at the Victoria Conference Centre.</p>
-								</div>
-							</div>
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g3.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g3.jpg" alt=" " class="img-responsive">
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Hack UVIC 2018</h5>
-									<p>March 2018</p>
-									<p>Used linear regression in an attempt to predict how many points NHL rookies would expect in their first season.</p>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="playing" aria-labelledby="playing-tab">
-						<div class="w3_tab_img">
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g4.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g4.jpg" alt=" " class="img-responsive">
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Study of Google's QUIC FTP</h5>
-									<p>April 2018</p>
-									<p>I analyzed different file transfer protocols and tried to determine how QUIC uses different aspects from TCP and UDP coherently.</p>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="painting" aria-labelledby="painting-tab">
-						<div class="w3_tab_img">
-							<div class="col-sm-3 w3_tab_img_left">
-								<div class="demo">
-									<a class="cm-overlay" href="images/g1.jpg">
-										<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g1.jpg" alt=" " class="img-responsive">
-										</figure>
-									</a>
-								</div>
-								<div class="agile-gallery-info">
-									<h5>Zasha Apparel Financial Analysis</h5>
-									<p>May 2018</p>
-									<p>Built a spreadsheet to track sales, break-even points, profits and more based off of investments and cost of materials.</p>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="js/jquery.tools.min.js"></script>
-		<script src="js/jquery.mobile.custom.min.js"></script>
-		<script src="js/jquery.cm-overlay.js"></script>
-		<script>
-			$(document).ready(function () {
-				$('.cm-overlay').cmOverlay();
-			});
-		</script>
-	</div>
-	<!-- //menu -->
-	<!-- services -->
-	<div class="w3ls-section services" id="services">
-		<div class="container">
-			<h3 class="agileits-title text-center">services</h3>
-			<div class="services-w3ls-row agileits-w3layouts service1 text-center">
-				<h5>web design</h5>
-				<p>Good understanding of HTML and other website building platforms.</p>
-				<div class="s-top">
-					<span class="fa fa-laptop" aria-hidden="true"></span>
-				</div>
-			</div>
-			<div class="services-w3ls-row agileits-w3layouts middlegrid-w3ls">
-				<div class="col-md-4 services-grid agileits-w3layouts service2">
-					<div class="col-md-10 w3ls-sub-text">
-						<h5>software development</h5>
-						<p>Comfortable using object oriented programming languages including Python and Java.</p>
-					</div>
-					<div class="col-md-2 sub-icon">
-						<span class="fa fa-caret-square-o-up" aria-hidden="true"></span>
-					</div>
-				</div>
-				<div class="col-md-4 services-grid img-agileits">
-					<img src="images/services.jpg" class="img-responsive" alt="" />
-				</div>
-				<div class="col-md-4 services-grid agileits-w3layouts service3">
-					<div class="col-md-2 sub-icon">
-						<span class="fa fa-grav" aria-hidden="true"></span>
-					</div>
-					<div class="col-md-10 w3ls-sub-text">
-						<h5>graphic design</h5>
-						<p>Comfortable using creative applications such as Photoshop and Adobe Premiere Pro.</p>																	
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="services-w3ls-row agileits-w3layouts service4">
-				<div class="s-top">
-					<span class="fa fa-adjust" aria-hidden="true"></span>
-				</div>
-				<h5>data analysis</h5>
-				<p>Enjoy data mining and data analysis of various inputs of data.</p>
-			</div>
-		</div>
-	</div>
-	<!-- //services -->
-	<!-- contact -->
-	<div class="contact-w3-agileits w3ls-section" id="contact">
-		<div class="container">
-			<h3 class="agileits-title cont-w3l">Feel free to contact me</h3>
-			<div class="contact-main-w3ls">
-				<div class="col-md-6  contact-left-w3ls">
-					<div class="mail contact-grid-agileinfo">
-						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
-							<h4>Email</h4>
-						</div>
-						<div class="col-md-8  col-sm-8 col-xs-8 contact-text-agileinfo">
-							<a href="mailto:info@example.com">camzarubiak@gmail.com</a><br>
-							<a href="mailto:info@example.com">zashaapparel@gmail.com</a>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="call contact-grid-agileinfo">
-						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
-							<h4>Phone Number</h4>
-						</div>
-						<div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
-							<p>(604)-996-7163</p>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="contact-grid-agileinfo">
-						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
-							<h4>Address</h4>
-						</div>
-						<div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
-							<p>4131 San Capri Terrace<br> Victoria, BC V8N 2J5<br> Canada
-							</p>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="visit wthree-social-icons contact-grid-agileinfo">
-						<div class="col-md-4 col-sm-4 col-xs-4 contact-icon-wthree">
-							<h4>Follow me</h4>
-						</div>
-						<div class="col-md-8 col-sm-8 col-xs-8 contact-text-agileinfo">
-							<ul class="w3-links">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				<div class="contact-main">
-					<div class="col-md-4 agileits-main-right">
-						<form action="#" method="post" class="agile_form">
-							<label class="header">Name</label>
-							<div class="icon1 w3ls-name1">
-								<input placeholder=" " name="first name" type="text" required="">
-							</div>
-							<div class="icon2">
-								<label class="header">Email</label>
-								<input placeholder=" " name="Email" type="email" required="">
-							</div>
-							<label class="header">your message</label>
-							<textarea class="w3l_summary" required=""></textarea>
-							<input type="submit" value="SEND">
-						</form>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //contact -->
-	<div class="agileits_w3layouts-footer">
-		<p>© 2017 Designer. All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
-	</div>
-	<!-- start-smooth-scrolling -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
 
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
-	<!-- smooth-scrolling-of-move-up -->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
+   		</div>
 
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
+   	</div>
 
-		});
-	</script>
-<script type="text/javascript" src="js/SmoothScroll.min.js"></script>
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/bootstrap.js"></script>
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
+   		</div>
+   	</div>
+
+   </section> <!-- /process-->
+
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Resume</h5>
+   			<h1>More of my credentials.</h1>
+
+   			<p class="lead">My work/education experience is displayed below. I will graduate from the University of Victoria in June 2019.</p>
+
+   		</div>
+   	</div> <!-- /section-intro-->
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Work Experience</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Lead Coding Instructor</h3>
+	   					<p>May 2018 - August 2018</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Byte Camp</h4>
+	   					<p>As a lead coding instructor, I taught children between the ages of 11-15 basic HTML, CSS, and Javascript to produce basic games, websites, and Android applications.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Landscaper</h3>
+	   					<p>May 2016 - August 2016</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Deca Horticultural Services</h4>
+	   					<p>I was responsible for all duties associated with landscaping and gardening. This job taught me how to work hard and get tasks accomplished in a minimal allocated time. </p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->
+
+   		</div> <!-- /col-twelve -->
+
+   	</div> <!-- /resume-timeline -->
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Bachelor Degree</h3>
+	   					<p>September 2014 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>University of Victoria</h4>
+	   					<p>I plan to graduate with a Computer Science degree from the University of Victoria upon completion of my current semester.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>High School Diploma</h3>
+	   					<p>September 2009 - June 2014</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Lord Tweedsmuir</h4>
+	   					<p>I graduated from high school on the honour roll, with certificates for excellence in math and physics courses.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->
+
+   		</div> <!-- /col-twelve -->
+
+   	</div> <!-- /resume-timeline -->
+
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Portfolio</h5>
+   			<h1>Check out my work.</h1>
+
+   			<p class="lead">Below are various software related competitions and projects I have competed in and completed.</p>
+
+   		</div>
+   	</div> <!-- /section-intro-->
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/battlesnake.png" alt="Liberty">
+	                  <a href="#modal-01" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Battlesnake 2019</h3>
+		     					    	 <span class="folio-types">
+		     					       	  Coding Competition
+		     					       </span>
+		     					   </div>
+	                     </div>
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/zashafa.png" alt="Shutterbug">
+	               	<a href="#modal-02" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Zasha Apparel Financial Analysis</h3>
+		     					    	<span class="folio-types">
+		     					       	  Business Project
+		     					      </span>
+		     					   </div>
+	                     </div>
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/quic3.png"alt="Clouds">
+	                  <a href="#modal-03" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Google QUIC Analyis</h3>
+		     					    	<span class="folio-types">
+		     					       	  Networking Project
+		     					      </span>
+		     					   </div>
+	                     </div>
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/hackuvic.png" alt="Beetle">
+	                  <a href="#modal-04" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Hack UVIC 2018</h3>
+		     					    	<span class="folio-types">
+		     					       	  Machine Learning Project
+		     					      </span>
+		     					   </div>
+	                     </div>
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/battlesnake2.png" alt="Lighthouse">
+	                  <a href="#modal-05" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Battlesnake 2018</h3>
+		     					    	<span class="folio-types">
+		     					       	  Coding Competition
+		     					      </span>
+		     					   </div>
+	                     </div>
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/zashaapparel.png" alt="Salad">
+	                  <a href="#modal-06" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Zasha Apparel Website</h3>
+		     					    	<span class="folio-types">
+		     					       	  Website Development
+		     					      </span>
+		     					   </div>
+	                     </div>
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/snake2019.gif" alt="" />
+				     	</div>
+
+					   <div class="description-box">
+					      <h4>Battlesnake 2019</h4>
+					      <p>By the end of the day my Javascript snake was a hungry snake, and targeted the closest food available on the board.</p>
+
+					      <div class="categories">Coding Competition</div>
+					   </div>
+
+			         <div class="link-box">
+			            <a href="https://play.battlesnake.io/">Battlesnake Website</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>
+
+				   </div> <!-- /modal-01 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">
+
+				     	<div class="media">
+				     		<img src="images/portfolio/zashafa.png" alt="" />
+				     	</div>
+
+					   <div class="description-box">
+					      <h4>Zasha Apparal Financial Analysis</h4>
+					      <p>Built a spreadsheet to track sales, break-even points, profits and more based off of investments and cost of materials.</p>
+
+					      <div class="categories">Business Projects</div>
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.zashaapparel.com">Zasha Apparel Website</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">
+
+				     	<div class="media">
+				     		<img src="images/portfolio/quic2.png" alt="" />
+				     	</div>
+
+					   <div class="description-box">
+					      <h4>Google QUIC Analysis</h4>
+					      <p>I analyzed different file transfer protocols and tried to determine how QUIC uses different aspects from TCP and UDP coherently.</p>
+
+					      <div class="categories">Networking Project</div>
+					   </div>
+
+			         <div class="link-box">
+			            <a href="https://en.wikipedia.org/wiki/QUIC">More about QUIC</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">
+
+				     	<div class="media">
+				     		<img src="images/portfolio/hackuvic.png" alt="" />
+				     	</div>
+
+
+
+               <div class="description-box">
+  					      <h4>Hack UVIC 2018</h4>
+  					      <p>I used linear regression in an attempt to predict how many points NHL rookies would expect in their first season.</p>
+
+  					      <div class="categories">Machine Learning Project</div>
+  					   </div>
+
+  			         <div class="link-box">
+  			            <a href="https://devpost.com/software/hockey_analytics">Project Link</a>
+  					      <a href="#" class="popup-modal-dismiss">Close</a>
+  			         </div>
+
+				   </div> <!-- /modal-05 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/battlesnake.gif" alt="" />
+				     	</div>
+
+              <div class="description-box">
+                 <h4>Battlesnake 2018</h4>
+                 <p>I developed a Python snake to slither its way through the competition at Battlesnake 2018.</p>
+
+                 <div class="categories">Coding Competition</div>
+              </div>
+
+                <div class="link-box">
+                   <a href="https://play.battlesnake.io/">Battlesnake Website</a>
+                 <a href="#" class="popup-modal-dismiss">Close</a>
+                </div>
+
+				   </div> <!-- /modal-05 -->
+
+				   <div id="modal-06" class="popup-modal slider mfp-hide">
+
+				     	<div class="media">
+				     		<img src="images/portfolio/zashaapparel.png" alt="" />
+				     	</div>
+
+					   <div class="description-box">
+					      <h4>Zasha Apparel Website</h4>
+					      <p>A website I am developing to show my passion for designing clothes.</p>
+
+					      <div class="categories">Website Development</div>
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.zashaapparel.com">Zasha Apparel Site</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>
+
+				   </div> <!-- /modal-06 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper -->
+
+   		</div>  <!-- /twelve -->
+
+   	</div> <!-- /portfolio-content -->
+
+	</section> <!-- /portfolio -->
+
+
+	<!-- CTA Section
+   ================================================== -->
+
+
+
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Services</h5>
+   			<h1>How can I help you?</h1>
+
+   			<p class="lead">Below are different subjects in computer science and software engineering I feel experienced in.</p>
+
+   		</div>
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+
+	      	<div class="service">
+
+	      		<span class="icon"><i class="icon-earth"></i></span>
+
+	            <div class="service-content">
+
+	            	 <h3>Web Design</h3>
+
+		            <p class="desc">Finding new ways to design websites better is something I try to do. Pre-planning my designs on paper and turning them into websites is a challenge I enjoy.
+	         		</p>
+
+	         	</div>
+
+				</div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-window"></i></span>
+
+	            <div class="service-content">
+
+	            	<h3>Web Development</h3>
+
+		            <p class="desc">ReactJS, AngularJS, and VueJS are all very interesting Javascript libraries which I am currently learning about. I am taking online courses on ReactJS currently.
+	         		</p>
+
+	            </div>
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-paint-brush"></i></span>
+
+	            <div class="service-content">
+
+	            	<h3>Software Development</h3>
+
+		            <p class="desc">My Javasctipt/HTML/CSS knowledge combined with my backend database system knowledge can be valuable when developing new software applications.
+	        			</p>
+
+	            </div>
+
+			   </div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-toggles"></i></span>
+
+	            <div class="service-content">
+
+	            	<h3>UI/UX Design</h3>
+
+		            <p class="desc">The challenge of optimally finding pleasing color combinations and efficiently positioning elements on the page is something I thrive at.
+	         		</p>
+
+	            </div>
+
+				</div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-image"></i></span>
+
+	            <div class="service-content">
+
+	            	<h3>Graphics Design</h3>
+
+		            <p class="desc">I use vector graphics art software (such as Inkscape) and raster graphics editors (such as Photoshop) to create designs for my apparel business.
+	        			</p>
+
+	            </div>
+
+			   </div> <!-- /service -->
+
+	      </div> <!-- /services-list -->
+
+   	</div> <!-- /services-content -->
+
+	</section> <!-- /services -->
+
+
+	<!-- stats Section
+   ================================================== -->
+   <!--
+	<section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="col-twelve">
+
+				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-pencil-ruler"></i>
+						</div>
+
+						<h3 class="stat-count">
+							1500
+						</h3>
+
+						<h5 class="stat-title">
+							Projects Completed
+						</h5>
+
+					</div> <!-- /stat -->
+
+
+			<!--	</div> <!-- /stats-list -->
+
+		<!--	</div> <!-- /twelve -->
+	<!--	</div> <!-- /row -->
+
+<!--	</section> <!-- /stats -->
+
+
+   <!-- contact
+   ================================================== -->
+   <!--
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+
+   		</div>
+   	</div> <!-- /section-intro -->
+<!--
+   	<div class="row contact-form">
+
+   		<div class="col-twelve">
+
+            <!-- form -->
+    <!--
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
+
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	               </div>
+                 <div class="form-field">
+                     <button class="submitform">Submit</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+<!--
+            <!-- contact-warning -->
+            <!--
+            <div id="message-warning">
+            </div>
+            <!-- contact-success -->
+            <!--
+      		<div id="message-success">
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+      		</div>
+
+         </div> <!-- /col-twelve -->
+
+  <!-- 	</div> <!-- /contact-form -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Where to find me</h5>
+
+   			<p>
+            Victoria,<br>
+            British Columbia,<br>
+            Canada
+            </p>
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email Me At</h5>
+
+   			<p>camzarubiak@gmail.com<br>
+			   	zashaapparel@gmail.com
+			   </p>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Call Me At</h5>
+
+   			<p>Phone: (604)-996-7163
+			   </p>
+
+   		</div>
+
+   	</div> <!-- /contact-info -->
+
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">
+			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			   </ul>
+
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span></span>
+		        	<span></span>
+		         </div>
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->
+   </footer>
+
+   <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
 </body>
+
 </html>
