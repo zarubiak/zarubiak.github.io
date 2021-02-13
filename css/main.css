@@ -125,3 +125,16 @@
   font-weight: 500;
   color: white;
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+  .terminal-window {
+    width: 320px;
+  }
+
+  .title {
+    padding-top: 125px;
+    text-align: center;
+  }
+}
