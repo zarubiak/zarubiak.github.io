@@ -16,12 +16,16 @@ $(() => {
       action: 'type',
       strings: [
         'Welcome to my website!', 
-        'My name is Cam Zarubiak. I\'m a Software Developer currently based out of Victoria, British Columbia. I enjoy writing scalable code for projects with a purpose. ', 
-        'I\'m currently working with frontend technologies such as React.js and Next.js, while also using backend technologies such as Django and Prisma. I combine my frontend and backend skills when deploying containerized applications to serverless architecture.',
-        'This year I plan to focus my studies more on network security technologies such as cybersecurity architecture and network vulnerability testing/evaluation. I utilize libraries such as NumPy, TensorFlow, and Scikit-learn for creative Machine Learning projects.',
-        'If you wish to contact me, you can reach me at camzarubiak@gmail.com. Have a lovely day :)'
+        'My name is Cam Zarubiak.', 
+        'I\'m a Software Developer currently based out of Victoria, British Columbia.', 
+        'I enjoy writing scalable code for projects with a purpose. ', 
+        'I\'m currently working with frontend technologies such as React.js and Next.js.', 
+        'I also use backend technologies such as Django and Prisma.', 
+        'I combine my frontend and backend skills when deploying containerized applications to serverless architecture.',
+        'This year I plan to focus my studies more on network security technologies such as cybersecurity architecture.',
+        'If you wish to contact me, you can reach me at camzarubiak@gmail.com. Have a lovely day :)',
       ],
-      postDelay: 500
+      postDelay: 1000
     }
   ];
     runScripts(data, 0);
