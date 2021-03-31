@@ -21,11 +21,12 @@ $(async () => {
         'I\'m a Software Developer based out of Victoria, British Columbia.', 
         'I enjoy writing scalable code for projects with a purpose. ', 
         'I work with frontend technologies such as React.js and Next.js.', 
-        'I\'m also proficient with backend technologies such as Django and Prisma.', 
+        'I\'m proficient with modern backend technologies such as Django and Prisma.', 
         'I enjoy deploying containerized applications to serverless architecture.',
         `My current chess.com rapid rating is ${chessStatsObj.rapid_score}.`,
         `I have ${chessStatsObj.rapid_wins} wins, ${chessStatsObj.rapid_loss} losses, and ${chessStatsObj.rapid_ties} ties.`,
-        'For any inquiries, email me at camzarubiak@gmail.com. Have a lovely day :)',
+        'For any inquiries, email me at camzarubiak@gmail.com.',
+        'Have a lovely day :)',
       ],
       postDelay: 1000
     }
