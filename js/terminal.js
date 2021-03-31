@@ -1,5 +1,6 @@
-$(() => {
-    var data = [
+$(async () => {
+  let chessStatsObj = await fetchChessData();
+  var data = [
     { 
       action: 'type',
       strings: ["npm install -g zasha^400"],
@@ -17,19 +18,34 @@ $(() => {
       strings: [
         'Welcome to my website!', 
         'My name is Cam Zarubiak.', 
-        'I\'m a Software Developer currently based out of Victoria, British Columbia.', 
+        'I\'m a Software Developer based out of Victoria, British Columbia.', 
         'I enjoy writing scalable code for projects with a purpose. ', 
-        'I\'m currently working with frontend technologies such as React.js and Next.js.', 
-        'I also use backend technologies such as Django and Prisma.', 
-        'I combine my frontend and backend skills when deploying containerized applications to serverless architecture.',
-        'This year I plan to focus my studies more on network security technologies such as cybersecurity architecture.',
-        'If you wish to contact me, you can reach me at camzarubiak@gmail.com. Have a lovely day :)',
+        'I work with frontend technologies such as React.js and Next.js.', 
+        'I\'m also proficient with backend technologies such as Django and Prisma.', 
+        'I enjoy deploying containerized applications to serverless architecture.',
+        `My current chess.com rapid rating is ${chessStatsObj.rapid_score}.`,
+        `I have ${chessStatsObj.rapid_wins} wins, ${chessStatsObj.rapid_loss} losses, and ${chessStatsObj.rapid_ties} ties.`,
+        'For any inquiries, email me at camzarubiak@gmail.com. Have a lovely day :)',
       ],
       postDelay: 1000
     }
   ];
     runScripts(data, 0);
   });
+
+  fetchChessData = async (url = 'https://api.chess.com/pub/player/czurbz/stats') => {
+    const response = await fetch(url);
+    let stats = await response.json();
+    
+    let statsObj = {
+      rapid_score: stats.chess_rapid.last.rating,
+      rapid_wins: stats.chess_rapid.record.win,
+      rapid_loss: stats.chess_rapid.record.loss,
+      rapid_ties: stats.chess_rapid.record.draw,
+    }
+
+    return statsObj;
+  }
   
   runScripts = (data, pos) => {
       var prompt = $('.prompt'),
