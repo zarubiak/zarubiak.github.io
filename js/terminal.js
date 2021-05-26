@@ -9,27 +9,63 @@ $(async () => {
     },
     { 
       action: 'type',
-      strings: ["zasha welcome^400"],
-      output: ' ',
+      strings: ['Welcome to my website! <span>&#10084;</span>'],
+      output: '&nbsp;',
       postDelay: 1000
     },
     { 
       action: 'type',
-      strings: [
-        'Welcome to my website!', 
-        'My name is Cam Zarubiak.', 
-        'I\'m a Software Developer based out of Victoria, British Columbia.', 
-        'I enjoy writing scalable code for projects with a purpose. ', 
-        'I work with frontend technologies such as React.js and Next.js.', 
-        'I\'m proficient with modern backend technologies such as Django and Prisma.', 
-        'I enjoy deploying containerized applications to serverless architecture.',
-        `My current chess.com rapid rating is ${chessStatsObj.rapid_score}.`,
-        `I have ${chessStatsObj.rapid_wins} wins, ${chessStatsObj.rapid_loss} losses, and ${chessStatsObj.rapid_ties} ties.`,
-        'For any inquiries, email me at camzarubiak@gmail.com.',
-        'Have a lovely day :)',
-      ],
+      strings: ['I\'m a Software Developer from Victoria, BC.'],
+      output: '&nbsp;',
       postDelay: 1000
-    }
+    },
+    { 
+      action: 'type',
+      strings: ['I enjoy writing scalable code for projects with a purpose.'],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: ['I do frontend and backend work using Javascript and Python.'],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: ['I enjoy deploying containerized applications to serverless architecture.'],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: ['I also enjoy playing chess <span>&#9812;</span>'],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: [`My current chess.com rapid rating is ${chessStatsObj.rapid_score}.`],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: [`I have ${chessStatsObj.rapid_wins} wins, ${chessStatsObj.rapid_loss} losses, and ${chessStatsObj.rapid_ties} ties.`],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: ['For any inquiries, email me at camzarubiak@gmail.com.'],
+      output: '&nbsp;',
+      postDelay: 1000
+    },
+    { 
+      action: 'type',
+      strings: ['Have a lovely day <span>&#10084;</span>'],
+      postDelay: 1000
+    },
   ];
     runScripts(data, 0);
   });

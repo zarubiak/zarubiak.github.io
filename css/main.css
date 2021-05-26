@@ -139,3 +139,13 @@ body, html {
     text-align: center;
   }
 }
+
+/* Job Link */
+.job-link {
+  color: white;
+  font-weight: bold;
+}
+
+.job-link:hover {
+  color: #2f54eb;
+}
