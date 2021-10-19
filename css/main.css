@@ -1,151 +1,137 @@
-/* CSS For Sections */
-.section-fluid {
-  height: 100vh !important;
-}
-
 body, html {
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-}
-
-.first-layer {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-}
-
-/* Terminal */
-.terminal-window {
-  text-align: left;
-  top: 20px;
-  width: 500px;
-  height: 300px;
-  border-radius: 10px;
-  margin: auto;
-  position: relative;
-  margin-bottom: 100px;
-}
-
-.terminal-window header {
-  background: #E0E8F0;
-  height: 30px;
-  border-radius: 8px 8px 0 0;
-  padding-left: 10px;
-}
-
-.terminal-window header .button {
-  width: 12px;
-  height: 12px;
-  margin: 10px 4px 0 0;
-  display: inline-block;
-  border-radius: 8px;
-}
-
-.terminal-window header .button.green {
-  background: #3BB662;
-}
-
-.terminal-window header .button.yellow {
-  background: #E5C30F;
-}
-
-.terminal-window header .button.red {
-  background: #E75448;
-}
-
-.terminal-window section.terminal {
-  color: white;
-  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
-  font-size: 11pt;
-  background: #30353A;
-  padding: 10px;
-  box-sizing: border-box;
-  position: absolute;
-  width: 100%;
-  top: 30px;
-  bottom: 0;
-  overflow: auto;
-}
-
-.terminal-window section.terminal .typed-cursor {
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
-.terminal-data { 
-  display: none; 
-}
-
-.terminal-window .gray { 
-  color: gray; 
-}
-
-.terminal-window .green { 
-  color: green;
+  height: 100%;
 }
 
 /* Title */
-
 .title {
-  padding-top: 20vh;
-  text-align: center;
+  height: 100%;
 }
 
 .title > h1 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: system-ui, Courier, monospace;
+  font-weight: 900;
+  font-size: 72px;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.title > h4, .title > p {
+  font-family: system-ui, Courier, monospace;
   font-weight: 900;
   color: white;
+  margin: 0;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 
-.title > h4 {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 500;
-  color: white;
+/* Mugshot */
+
+.zasha-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 10px solid white;
+  margin: 0;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 
-.title > p {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 500;
+/* Header */
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+
+.header > p {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 800;
   color: white;
+  margin-right: 2vw;
+  margin-top: 1em;
+  text-align: right;
+}
+
+.header > img {
+  margin-left: 2vw;
+  margin-top: 1em;
+  text-align: left;
+  height: 40px;
+  width: 40px;
+  top: 0px;
+  position: absolute;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer > .chess-stats {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 800;
+  color: white;
+  padding-right: 2vw;
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.footer > .links {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 800;
+  color: white;
+  margin-left: 2vw;
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
 }
 
 /* Media Queries */
 
 @media only screen and (max-width: 600px) {
-  .terminal-window {
-    width: 320px;
+  .title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 456px) {
+  .title > p {
+    top: 70%;
   }
 
-  .title {
-    padding-top: 125px;
-    text-align: center;
+  .title > h1 {
+    font-size: 56px;
+  }
+
+  .zasha-img {
+    height: 220px;
+    width: 220px;
   }
 }
 
 /* Job Link */
 .job-link {
   color: white;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .job-link:hover {
-  color: #2f54eb;
+  color: #40a9ff;
 }
