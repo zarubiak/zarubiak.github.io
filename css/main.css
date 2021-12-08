@@ -34,7 +34,6 @@ body, html {
 }
 
 /* Mugshot */
-
 .zasha-img {
   height: 300px;
   width: 300px;
@@ -74,26 +73,7 @@ body, html {
   position: absolute;
 }
 
-/* Footer */
-.footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-}
-
-.footer > .chess-stats {
-  font-family: system-ui, Courier, monospace;
-  font-weight: 800;
-  color: white;
-  padding-right: 2vw;
-  text-align: right;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  z-index: 1;
-}
-
-.footer > .links {
+.header > .links {
   font-family: system-ui, Courier, monospace;
   font-weight: 800;
   color: white;
@@ -103,8 +83,28 @@ body, html {
   z-index: 2;
 }
 
-/* Media Queries */
+/* NFT Collection */
+.nft-collection {
+  text-align: center;
+  text-align: -webkit-center;
+}
 
+.nft-collection > .collection {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  margin: 10vh 0vh;
+}
+
+.nftiframe {
+  width: 80%; 
+  height: 100vh;
+}
+
+/* Media Queries */
 @media only screen and (max-width: 600px) {
   .title {
     text-align: center;
