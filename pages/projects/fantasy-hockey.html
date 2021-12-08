@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Zasha's Projects</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Welcome to Cam Zarubiak's latest project.">
+    <meta name="keywords" content="Software, Development, Design">
+    <link rel="icon" type="image/png" href="../../images/zasha-logo.png">
+    <link href="../../css/projects.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+
+  <body class="body">
+    <!-- Sections -->
+    <div class="project-title">
+        <h1>Leveraging Google Cloud Platform's VertexAI To Make My Fantasy Hockey Draft Picks</h1>
+        <h6>Cam Zarubiak - October 19th, 2021</h6>
+    </div>
+
+    <div class="project-body">
+        <h3>
+            Introduction
+        </h3>
+        <p>
+            The world runs on data, and after finishing 8th out of 10 in my fantasy hockey league last year, 
+            I knew I needed to leverage the worlds most valuable resource to improve my fantasy hockey game. 
+            For some context, this is a keepers league (you keep some players every passing season) and we are 
+            in our fourth season. At the end of each season, every team is allowed to protect 12 players that  
+            are on their roster, and the remaining 7 players from their roster are dropped into the draft pool for next year. This 
+            leads to a 7 round draft from all players not currently on someones roster. Rookies and recently dropped 
+            players are popular picks in these drafts, but I wanted to leverage data to confirm this. Google Cloud Platform 
+            is an ensuite of cloud computing services that give your data superpowers. They offer a $300 free credit for new 
+            accounts to try out these services (which was more than sufficient for this project). Google Cloud Storage and 
+            Google's VertexAI are the two services that I used for my project. Data will be uploaded to Cloud Storage, used to 
+            create a dataset in VertexAI, to train a model using Google's powerful AutoML tool, and to predict fantasy points for a 
+            player based off quantitative inputs such as age, height, weight, game score, corsi etc. My goal was to have this 
+            machine learning model tell me the best draft eligible players to consider (within a certain degree of confidence).
+            Let's dive into to the methods behind my madness!
+        </p>
+
+        <h3>
+            Identify A Data Source
+        </h3>
+        <p>
+            The first, and most important step, in creating any machine learning model is acquiring a high quality dataset. After 
+            searching around online I stumbled upon www.moneypuck.com/data.htm which contains extensive player data for the past 
+            13 seasons (Shoutout to the moneypuck team as they update their high quality data frequently). This dataset was perfect 
+            for identifying how many fantasy points a certain player would have put up in previous seasons, but I was still lacking 
+            a data source containing information about the players height, weight, and age. For this data I needed to use NHL's suprisingly 
+            undocumented API. Shoutout to dword4 on GitHub for providing documentation found from many different sources on the web explaining 
+            the different endpoints that NHL makes accessible. I created a python script to do the following:
+        </p>
+        <ul>
+            <li>Send a request to get all the active teams in the league for a specific year</li>
+            <li>Get ID's for all the active teams for append it to a list</li>
+            <li>Loop through every team in the league and initiate a request to get roster data</li>
+            <li>Send a request for each player listed on the roster to get their respective id, name, age, weight and height</li>
+            <li>Write the player JSON data to a CSV file and save it as player info for the specified year</li>
+        </ul>
+        <p>
+            I ran this python script to get player data from the last 5 NHL seasons. We have sufficient data to start cleaning and restructuring 
+            our CSV files now!
+        </p>
+        <pre>
+            <code>
+    import requests
+    import json
+    import csv
+    from datetime import datetime
+
+    url_teams = "https://statsapi.web.nhl.com/api/v1/teams/?season=20112012"
+
+    # Send a request to get all current teams in the league
+    my_response_teams = requests.get(url_teams)
+    json_data_teams = json.loads(my_response_teams.content)
+    team_ids = []
+
+    # Get ID's for all the active teams for that year and append it to a list
+    for team in json_data_teams["teams"]:
+        team_ids.append(team["id"])
+
+    player_links = []
+
+    # Loop through every team in the leage and initiate a request to get roster data
+    for i in team_ids:
+        url_roster = f"https://statsapi.web.nhl.com/api/v1/teams/{i}/roster/?expand=team.roster&season=20112012"
+        my_response_roster = requests.get(url_roster)
+        json_data_roster = json.loads(my_response_roster.content)
+        
+        # Parse through the response data and add all links to the player_links array
+        for player in json_data_roster["roster"]:
+            player_links.append(player["person"]["link"])
+
+    finalized_data = []
+
+    # Send request for each player listed on the roster to get their respective link and id
+    for link in range(len(player_links)):
+        url_player = f"https://statsapi.web.nhl.com{player_links[link]}"
+        my_response_player = requests.get(url_player)
+        json_data_player = json.loads(my_response_player.content)
+
+        for player in json_data_player["people"]:
+            if ("currentAge" in player):
+                age = player["currentAge"]
+            else:
+                born = datetime.strptime(player["birthDate"], '%Y-%m-%d')
+                today = datetime.today()
+
+                age = today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+            temp_obj = {
+                "id": player["id"],
+                "name": player["fullName"], 
+                "age": age - 9, 
+                "height": player["height"], 
+                "weight": player["weight"]
+            }
+
+            finalized_data.append(temp_obj)
+
+    keys = finalized_data[0].keys()
+    with open('skaterbio1112.csv', 'w', newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(finalized_data)
+            </code>
+        </pre>
+
+        <h3>
+            Cleaning The Data
+        </h3>
+        <p>
+
+        </p>
+
+        <h3>
+            Establish a Data Structure
+        </h3>
+        <p>
+
+        </p>
+
+        <h3>
+            Upload CSV to Google Cloud Storage
+        </h3>
+        <p>
+
+        </p>
+
+        <h3>
+            Train a Model with Google VertexAI
+        </h3>
+        <p>
+
+        </p>
+
+        <h3>
+            Use the Model to Make Predictions
+        </h3>
+        <p>
+
+        </p>
+
+        <h3>
+            Future Improvements
+        </h3>
+        <p>
+
+        </p>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/terminal.js"></script>
+  </body>
+</html>
