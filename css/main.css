@@ -33,6 +33,18 @@ body, html {
   transform: translate(-50%, -50%)
 }
 
+.title > .project-link {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 71%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
 /* Mugshot */
 .zasha-img {
   height: 300px;
@@ -80,28 +92,7 @@ body, html {
   margin-left: 2vw;
   position: absolute;
   bottom: 0px;
-  z-index: 2;
-}
-
-/* NFT Collection */
-.nft-collection {
-  text-align: center;
-  text-align: -webkit-center;
-}
-
-.nft-collection > .collection {
-  font-family: system-ui, Courier, monospace;
-  font-weight: 800;
-  color: white;
-  text-align: center;
-  width: 100%;
   z-index: 1;
-  margin: 10vh 0vh;
-}
-
-.nftiframe {
-  width: 80%; 
-  height: 100vh;
 }
 
 /* Media Queries */
