@@ -1,5 +1,5 @@
 body, html {
-  background: linear-gradient(20deg, rgba(255,173,252,1) 0%, rgba(152,247,255,1) 50%, rgba(254,255,158,1) 100%);
+  background-color: #95B46A !important;
   height: 100%;
 }
 
@@ -12,7 +12,7 @@ body, html {
   font-family: system-ui, Courier, monospace;
   font-weight: 900;
   font-size: 72px;
-  color: navy;
+  color: #172815;
   margin: 0;
   position: absolute;
   top: 61%;
@@ -24,7 +24,7 @@ body, html {
 .title > h4, .title > p {
   font-family: system-ui, Courier, monospace;
   font-weight: 900;
-  color: navy;
+  color: #172815;
   margin: 0;
   position: absolute;
   top: 68%;
@@ -40,7 +40,7 @@ body, html {
 .title > .project-link {
   font-family: system-ui, Courier, monospace;
   font-weight: 900;
-  color: navy;
+  color: #172815;
   margin: 0;
   top: 71%;
   left: 50%;
@@ -53,13 +53,8 @@ body, html {
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border: 10px solid navy;
-  margin: 0;
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  border: 6px solid #172815;
+  margin-bottom: 1em;
 }
 
 /* Header */
@@ -72,7 +67,7 @@ body, html {
 .header > p {
   font-family: system-ui, Courier, monospace;
   font-weight: 800;
-  color: navy;
+  color: #172815;
   margin-right: 2vw;
   margin-top: 1em;
   text-align: right;
@@ -91,7 +86,7 @@ body, html {
 .header > .links {
   font-family: system-ui, Courier, monospace;
   font-weight: 800;
-  color: navy;
+  color: #172815;
   margin-left: 2vw;
   position: absolute;
   bottom: 0px;
@@ -106,10 +101,6 @@ body, html {
 }
 
 @media only screen and (max-width: 456px) {
-  /* .title > p {
-    top: 70%;
-  } */
-
   .title > h1 {
     font-size: 56px;
   }
@@ -122,10 +113,34 @@ body, html {
 
 /* Job Link */
 .job-link {
-  color: navy;
+  color: #172815;
   font-weight: 900;
 }
 
 .job-link:hover {
-  color: #40a9ff;
+  color: #3E5622;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  top: 24vh;
+  font-weight: 900;
+}
+
+.project-links > .name {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 900;
+  color: #172815;
+}
+
+.project-links > .project-link {
+  font-family: system-ui, Courier, monospace;
+  font-weight: 700;
+  color: #172815;
+  margin: 0;
 }
